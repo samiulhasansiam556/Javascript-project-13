@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(6, 2, 2);
+}
+.main{
+    display: grid;
+    place-items: center; 
+    align-items: center;
+    gap: 10vh;
+    margin: 70px 0;
+}
+
+.hero{
+    width: 100wh;
+    height: 100vh;
+    background-color: antiquewhite;
+    text-align: center;
+    line-height: 100vh;
+    color: cadetblue;
+    font-size: 30px;
+    background-image: url("pi.webp");
+}
+
+.div1:nth-of-type(even) {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s ease-in-out; /* Added transition for smooth movement */
+    margin: 300px 0;
+    transform: translateX(-600px) scale(1.5) rotate(95deg);
+}
+.div1:nth-of-type(odd) {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s ease-in-out; /* Added transition for smooth movement */
+    margin: 300px 0;
+    transform: translateX(600px) scale(1.5) rotate(95deg);
+}
+
+.active:nth-of-type(even)  {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px) scale(1) rotate(0deg); /* Reapplying all transformations */
+   border-radius: 39px;
+   background-color: rgb(183, 30, 30);
+}
+
+.active:nth-of-type(odd)  {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px) scale(1) rotate(0deg); /* Reapplying all transformations */
+   border-radius: 39px;
+   background-color: rgb(45, 241, 58);
+}
